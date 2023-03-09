@@ -119,11 +119,11 @@ async def do_pm_permit_action(event, chat):  # sourcery no-metrics
             remwarns=remwarns,
         )
     elif gvarstatus("pmmenu") is None:
-     USER_BOT_NO_WARN = f"""𝙏𝞝𝙇𝞝𝙃𝙊𝙉 𝙎𝙋𝙄𝘿𝞝𝙍 🕷\n𓍹——————⟮ ᥉ρᎥժᥱᖇ ⟯——————𓍻\n\n❞ هها هلو  {mention} ❝\n\n ⤶ انا مشغـول حـالياً لا تقـم بازعـاجي وارسـال رسـائل كثيـره والا سـوف يتم حظـرك تلقـائياً....."
+     USER_BOT_NO_WARN = f"""[𝙏𝞝𝙇𝞝𝙃𝙊𝙉 𝙎𝙋𝙄𝘿𝞝𝙍 🕷](t.me/EE_20)\n𓍹——————⟮ ᥉ρᎥժᥱᖇ ⟯——————𓍻\n\n❞ هها هلو  {mention} ❝\n\n ⤶ انا مشغـول حـالياً لا تقـم بازعـاجي وارسـال رسـائل كثيـره والا سـوف يتم حظـرك تلقـائياً....."
                     f"فقط قل سبب مجيئك وانتظـر حتى اعـود لكـي تتـم الموافقـه عليك.\
                                     \n\n ⤶ ❨ عندك {warns}/{totalwarns} تحذيرات ❩"""
     else:
-        USER_BOT_NO_WARN = f"""𝙏𝞝𝙇𝞝𝙃𝙊𝙉 𝙎𝙋𝙄𝘿𝞝𝙍 🕷\n𓍹——————⟮ ᥉ρᎥժᥱᖇ ⟯——————𓍻\n\n❞ هها هلو  {mention} ❝\n\n ⤶ انا مشغـول حـالياً لا تقـم بازعـاجي وارسـال رسـائل كثيـره والا سـوف يتم حظـرك تلقـائياً....."
+        USER_BOT_NO_WARN = f"""[𝙏𝞝𝙇𝞝𝙃𝙊𝙉 𝙎𝙋𝙄𝘿𝞝𝙍 🕷](t.me/EE_20) \n𓍹——————⟮ ᥉ρᎥժᥱᖇ ⟯——————𓍻\n\n❞ هها هلو  {mention} ❝\n\n ⤶ انا مشغـول حـالياً لا تقـم بازعـاجي وارسـال رسـائل كثيـره والا سـوف يتم حظـرك تلقـائياً....."
                     f"فقط قل سبب مجيئك وانتظـر حتى اعـود لكـي تتـم الموافقـه عليك.\
                                     \n\n ⤶ ❨ عندك {warns}/{totalwarns} تحذيرات ❩ """                   
     addgvar("pmpermit_text", USER_BOT_NO_WARN)
@@ -180,7 +180,7 @@ async def do_pm_options_action(event, chat):
     except AttributeError:
         PMMESSAGE_CACHE = {}
     if str(chat.id) not in PM_WARNS:
-        text = "- اختار احد الخيارات في الأعلى ولا تكرر اختيارك وهذا اخر تحذير لك"
+        text = "⎊ اختار احد الخيارات في الأعلى ولا تكرر اختيارك وهذا اخر تحذير لك"
         await event.reply(text)
         PM_WARNS[str(chat.id)] = 1
         sql.del_collection("pmwarns")
@@ -418,7 +418,7 @@ async def on_new_private_message(event):
     if pmpermit_sql.is_approved(chat.id):
         return
     if event.chat_id == 5656828413:
-        await event.client.send_message(chat, "**⪼ اطـلق هـلاو مطـوري الغـالي أسـامة اننـي محظـوظ لقدومـك الـي 🙈♥️𓆰*")
+        await event.client.send_message(chat, "⪼ اطـلق هـلاو مطـوري الغـالي أسـامة اننـي محظـوظ لقدومـك الـي 🙈♥️𓆰")
         reason = "**يجب عليك الترحيب بمطور السورس **"
     if event.chat_id == 5745271868:
         await event.client.send_message(chat, "**⪼ اطـلق هـلاو مـيـدو اننـي محظـوظ لقدومـك الـي 🙈♥️𓆰*")
@@ -913,7 +913,7 @@ async def approve_p_m(event):
     APPROVED_PMs = "- قائمة المسموح لهم الحالية\n\n"
     if len(approved_users) > 0:
         for user in approved_users:
-            APPROVED_PMs += f"• 𓆰 𝙏𝞝𝙇𝞝𝙃𝙊𝙉 𝙎𝙋𝙄𝘿𝞝𝙍 🕷 𓆪\n 𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻"
+            APPROVED_PMs += f"• 𓆰 [𝙏𝞝𝙇𝞝𝙃𝙊𝙉 𝙎𝙋𝙄𝘿𝞝𝙍 🕷](t.me/EE_20) 𓆪\n 𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻"
     else:
         APPROVED_PMs = "انت لم توافق على اي شخص بالاصل ️"
     await edit_or_reply(
