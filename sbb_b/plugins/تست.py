@@ -119,7 +119,7 @@ async def do_pm_permit_action(event, chat):  # sourcery no-metrics
             remwarns=remwarns,
         )
     elif gvarstatus("pmmenu") is None:
-     USER_BOT_NO_WARN = f"""[𝙏𝞝𝙇𝞝𝙃𝙊𝙉 𝙎𝙋𝙄𝘿𝞝𝙍 🕷](https://t.me/EE_20)\n𓍹——————⟮ ᥉ρᎥժᥱᖇ ⟯——————𓍻\n\n❞ هها هلو  {mention} ❝\n\n ⤶ انا مشغـول حـالياً لا تقـم بازعـاجي وارسـال رسـائل كثيـره والا سـوف يتم حظـرك تلقـائياً....."
+     USER_BOT_NO_WARN = f"""𝙏𝞝𝙇𝞝𝙃𝙊𝙉 𝙎𝙋𝙄𝘿𝞝𝙍 🕷\n𓍹——————⟮ ᥉ρᎥժᥱᖇ ⟯——————𓍻\n\n❞ هها هلو  {mention} ❝\n\n ⤶ انا مشغـول حـالياً لا تقـم بازعـاجي وارسـال رسـائل كثيـره والا سـوف يتم حظـرك تلقـائياً....."
                     f"فقط قل سبب مجيئك وانتظـر حتى اعـود لكـي تتـم الموافقـه عليك.\
                                     \n\n ⤶ ❨ عندك {warns}/{totalwarns} تحذيرات ❩"""
     else:
