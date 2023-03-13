@@ -124,7 +124,7 @@ async def _(event):
 الامر:  `.حالة التثبيت`
 • لمعرفة عدد المحاولات للصيد
 
-@EE_20  - channle userbot 
+[𝙎𝙤𝙐𝙍𝙘𝙀 𝙎𝙋𝙞𝙙𝙀𝙍](t.me/EE_20) 
 
 """
     )
@@ -213,7 +213,7 @@ async def _(event):
         try:
             ch = await sbb_b(
                 functions.channels.CreateChannelRequest(
-                    title="SEMO HUNTER - صيد سبايدر",
+                    title="SPIDER HUNTER - صيد سبايدر",
                     about="This channel to hunt username by - @EE_20 ",
                 )
             )
