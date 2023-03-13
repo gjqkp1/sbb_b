@@ -27,7 +27,7 @@ def text_draw(font_name, font_size, img, text, width, hight, fill="white"):
 async def app_search(event):
     query = event.pattern_match.group(1)
     if not query:
-        return await edit_delete(event, "**- اكتب اسم التطبيق للبحث عنه في كوكل بلي**")
+        return await edit_delete(event, "**▿∲ اكتب اسم التطبيق للبحث عنه في جوجل بلاي**")
     await edit_or_reply(event, "`Searching!...`")
     try:
         final_name = query.replace(" ", "+")
@@ -57,7 +57,7 @@ async def app_search(event):
         downloads = soup.findAll("div", "ClM7O")
         info = soup.find("div", "omXQ6c")
     except AttributeError:
-        return await edit_delete(event, "**- يجب عليك كتابة عنوان صالح و صحيح**")
+        return await edit_delete(event, "**▿∲ يجب عليك كتابة عنوان صالح و صحيح**")
     downloads = f"{downloads[1].text}  downloads" if downloads else None
     info = info.text if info else None
     review = review.text if review else None

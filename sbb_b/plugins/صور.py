@@ -22,7 +22,7 @@ async def img_sampler(event):
         return await edit_or_reply(
             event, "⌔∮ يجب عليك كتابه ما تريد البحث عنه مع الامر"
         )
-    sbb_b = await edit_or_reply(event, "**❃ يتم البحث انتظر قليلا**")
+    sbb_b = await edit_or_reply(event, "**▿∲ يتم البحث انتظر قليلا**")
     if event.pattern_match.group(1) != "":
         lim = int(event.pattern_match.group(1))
         if lim > 10:

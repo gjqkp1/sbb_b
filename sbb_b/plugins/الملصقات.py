@@ -42,7 +42,7 @@ EMOJI_SEN = [
     "emoji",
 ]
 
-KANGING_STR = "**- جار نسخ الملصق الان انتظر قليلا**"
+KANGING_STR = "**▿∲ جار نسخ الملصق الان انتظر قليلا**"
 
 
 def verify_cond(jmthonarray, text):
@@ -93,7 +93,7 @@ async def delpack(jmthonevent, conv, args, packname):
 
 
 async def resize_photo(photo):
-    
+    """Resize the given photo to 512x512"""
     image = Image.open(photo)
     if (image.width and image.height) < 512:
         size1 = image.width
@@ -152,7 +152,7 @@ async def newpacksticker(
     rsp = await conv.get_response()
     if not verify_cond(EMOJI_SEN, rsp.text):
         await jmthonevent.edit(
-            f"**- فشل في اذافه هذه الحزمة عليك الاضافة يدويا من بوت الملصقات**\n**خطأ :**{rsp.text}"
+            f"**▿∲ فشل في اذافه هذه الحزمة عليك الاضافة يدويا من بوت الملصقات**\n**خطأ :**{rsp.text}"
         )
         if not pkang:
             return None, None, None
@@ -192,7 +192,7 @@ async def add_to_pack(
     emoji,
     cmd,
     pkang=False,
-):  
+):  # sourcery skip: low-code-quality
     try:
         await conv.send_message("/addsticker")
     except YouBlockedUserError:
@@ -369,10 +369,10 @@ async def kang(args):
             if char_is_emoji(splat[0][0]):
                 if char_is_emoji(splat[1][0]):
                     return await jmthonevent.edit("**- عليك التأكد من اوامر الملصقات**")
-                pack = splat[1]  
+                pack = splat[1]  # User sent both
                 emoji = splat[0]
             elif char_is_emoji(splat[1][0]):
-                pack = splat[0] 
+                pack = splat[0]  # User sent both
                 emoji = splat[1]
             else:
                 return await jmthonevent.edit("**- عليك التأكد من اوامر الملصقات**")
