@@ -143,7 +143,7 @@ async def hunterusername(event):
         try:
             ch = await sbb_b(
                 functions.channels.CreateChannelRequest(
-                    title="SEMO HUNTER - صيد سبايدر",
+                    title="SPIDER HUNTER - صيد سبايدر",
                     about="This channel to hunt username by - @EE_20 ",
                 )
             )
