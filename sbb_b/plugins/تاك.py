@@ -6,7 +6,7 @@ from sbb_b import sbb_b
 
 from ..core.managers import edit_delete, edit_or_reply
 
-@sbb_b.on(admin_cmd(pattern="تاك 200(?: |$)(.*)"))
+@sbb_b.on(admin_cmd(pattern="تاك(?: |$)(.*)"))
 async def iq(sbb_b):
     mentions = sbb_b.text[8:]
     chat = await sbb_b.get_input_chat()
