@@ -57,7 +57,7 @@ async def repo(event):
     RR7PP = Config.TG_BOT_USERNAME
     if event.reply_to_msg_id:
         await event.get_reply_message()
-    response = await bot.inline_query(WWWL5, "المطور")
+    response = await bot.inline_query(RR7PP, "المطور")
     await response[0].click(event.chat_id)
     await event.delete()
 
