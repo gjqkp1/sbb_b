@@ -47,12 +47,12 @@ async def nekobot(cat):
 
 
 @sbb_b.ar_cmd(
-    pattern="مودي(?:\s|$)([\s\S]*)",
-    command=("مودي", plugin_category),
+    pattern="فينوم(?:\s|$)([\s\S]*)",
+    command=("فينوم", plugin_category),
     info={
         "header": "modi tweet sticker with given custom text",
         "usage": "{tr}مودي <نص>",
-        "examples": "{tr}مودي كرستين الاصلي",
+        "examples": "{tr}فينوم سبايدر الاصلي",
     },
 )
 async def nekobot(cat):
@@ -67,7 +67,7 @@ async def nekobot(cat):
             text = reply.message
         else:
             return await edit_delete(cat, "**⌯︙يجـب كـتابة نـص اولا", 5)
-    cate = await edit_or_reply(cat, "⌯︙جاري طلب تغريدة من مودي...")
+    cate = await edit_or_reply(cat, "⌯︙جاري طلب تغريدة من فينوم...")
     text = deEmojify(text)
     await asyncio.sleep(2)
     catfile = await moditweet(text)
